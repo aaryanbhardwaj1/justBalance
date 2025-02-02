@@ -11,56 +11,63 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Personalization from './pages/Personalization'
+import { Route, Routes } from 'react-router-dom';
 
 
 
 function App() {
-  let page;
-  console.log(window.location.pathname);
-  switch(window.location.pathname){
-    case "/":
-      page = <Home/>
-      break
-    case "/about":
-      page = <About/>
-      break
-    case "/login":
-      page = <Login/>
-      break
-    case "/signup":
-      page = <SignUp/>
-      break
-    case "/personalization":
-      page = <Personalization/>
-      break
-    case "/dashboard":
-      page = <Dashboard/>
-      break
-    case "":
-      page = <Home/>
-      break
-    case "/about/":
-      page = <About/>
-      break
-    case "/login/":
-      page = <Login/>
-      break
-    case "/signup/":
-      page = <SignUp/>
-      break
-    case "/personalization/":
-      page = <Personalization/>
-      break
-    case "/dashboard/":
-      page = <Dashboard/>
-      break
+  // let page;
+  // switch(window.location.pathname){
+  //   case "/":
+  //     page = <Home/>
+  //     break
+  //   case "/about":
+  //     page = <About/>
+  //     break
+  //   case "/login":
+  //     page = <Login/>
+  //     break
+  //   case "/signup":
+  //     page = <SignUp/>
+  //     break
+  //   case "/personalization":
+  //     page = <Personalization/>
+  //     break
+  //   case "/dashboard":
+  //     page = <Dashboard/>
+  //     break
+  //   case "":
+  //     page = <Home/>
+  //     break
+  //   case "/about/":
+  //     page = <About/>
+  //     break
+  //   case "/login/":
+  //     page = <Login/>
+  //     break
+  //   case "/signup/":
+  //     page = <SignUp/>
+  //     break
+  //   case "/personalization/":
+  //     page = <Personalization/>
+  //     break
+  //   case "/dashboard/":
+  //     page = <Dashboard/>
+  //     break
 
-  }
+  // }
 
   return (
     <>
         <Navbar />
-        <div>{page}</div>
+        <div><Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/personalization' element={<Personalization/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
+          </Routes></div>
     </>
   )
 }

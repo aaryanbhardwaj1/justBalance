@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import justBalanceLogo from '../assets/justBalanced2.png'
-
+import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
+
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
@@ -12,14 +13,14 @@ const Navbar: React.FC = () => {
 
       {/* Page Links */}
       <div className={styles.navLinks}>
-        {/* <a href="/justBalance/" className={styles.navLink}>Home</a> */}
-        <CustomLink href="/">Home</CustomLink>
-        {/* <a href="/justBalance/about/" className={styles.navLink}>About</a> */}
-        <CustomLink href="/about">About</CustomLink>
-        {/* <a href="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
-        <CustomLink href="/contact">Contact</CustomLink>
-`        {/* <a href="/justBalance/login/" className={styles.navLink}>Log In</a> */}
-`        <CustomLink href="/login">Log In</CustomLink>
+        {/* <Link to="/justBalance/" className={styles.navLink}>Home</a> */}
+        <CustomLink to="/">Home</CustomLink>
+        {/* <Link to="/justBalance/about/" className={styles.navLink}>About</a> */}
+        <CustomLink to="/about">About</CustomLink>
+        {/* <Link to="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
+        <CustomLink to="/contact">Contact</CustomLink>
+`        {/* <Link to="/justBalance/login/" className={styles.navLink}>Log In</a> */}
+`        <CustomLink to="/login">Log In</CustomLink>
 
       </div>
 
@@ -31,14 +32,21 @@ const Navbar: React.FC = () => {
   );
 };
 
-function CustomLink({href, children, ...props}) {
-  const path = window.location.pathname
+function CustomLink({to, children, ...props}) {
+  const path = window.location.pathname;
+  const [count, setCount] = useState(0);
+
+  const forceRerender = () => {
+    setCount(prevCount => prevCount + 1); 
+  };
+
+  
 
   return (
-    <li className={path===href? "active" : ""}>
-      <a href={href} {...props}>
+    <li className={path===to? "active" : ""} onClick={forceRerender}>
+      <Link to={to} {...props}>
         {children}
-      </a>
+      </Link>
     </li>
   )
   

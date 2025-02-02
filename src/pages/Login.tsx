@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Login.css'
 import justBalanceLogo from '../assets/justBalanced2.png'
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -20,7 +20,7 @@ const Login = () => {
           <input type="password" placeholder="Password" required />
           <button type="submit">Sign In</button>
           <p className="signup-link">
-            Don't have an account? <CustomLink href = '/signup'> Sign Up</CustomLink>
+            Don't have an account? <CustomLink to = '/signup'> Sign Up</CustomLink>
           </p>
         </form>
       </div>
@@ -31,14 +31,14 @@ const Login = () => {
 )
 }
 
-function CustomLink({href, children, ...props}) {
+function CustomLink({to, children, ...props}) {
   const path = window.location.pathname
 
   return (
-    <li className={path===href? "active" : ""}>
-      <a href={href} {...props}>
+    <li className={path===to? "active" : ""}>
+      <Link to={to} {...props}>
         {children}
-      </a>
+      </Link >
     </li>
   )
   
