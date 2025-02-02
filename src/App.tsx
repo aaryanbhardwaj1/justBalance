@@ -9,47 +9,6 @@ import Dashboard from "./pages/Dashboard";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  // let page;
-  // switch(window.location.pathname){
-  //   case "/":
-  //     page = <Home/>
-  //     break
-  //   case "/about":
-  //     page = <About/>
-  //     break
-  //   case "/login":
-  //     page = <Login/>
-  //     break
-  //   case "/signup":
-  //     page = <SignUp/>
-  //     break
-  //   case "/personalization":
-  //     page = <Personalization/>
-  //     break
-  //   case "/dashboard":
-  //     page = <Dashboard/>
-  //     break
-  //   case "":
-  //     page = <Home/>
-  //     break
-  //   case "/about/":
-  //     page = <About/>
-  //     break
-  //   case "/login/":
-  //     page = <Login/>
-  //     break
-  //   case "/signup/":
-  //     page = <SignUp/>
-  //     break
-  //   case "/personalization/":
-  //     page = <Personalization/>
-  //     break
-  //   case "/dashboard/":
-  //     page = <Dashboard/>
-  //     break
-
-  // }
-
   return (
     <>
       <Navbar />

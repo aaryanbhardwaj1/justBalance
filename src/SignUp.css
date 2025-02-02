@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url('./assets/fridge-background1.webp');
+
   background-size: cover; /* Ensures the image covers the whole screen */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */

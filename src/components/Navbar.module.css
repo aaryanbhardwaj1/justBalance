@@ -16,7 +16,7 @@
   .logo {
     flex-grow: 0; /* Prevent the logo from expanding */
     display: flex;
-    align-items: center;
+    align-items: left;
   }
   
   .logo img {
@@ -29,7 +29,7 @@
   align-items: center;
     gap: 10px;
     flex-grow: 5; /* Allow the nav links to take up space */
-    justify-content: right;  /* Align nav links in the center */
+    justify-content: center;  /* Align nav links in the center */
   }
   
   .navLink {
