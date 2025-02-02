@@ -6,7 +6,7 @@ import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import About from './pages/About';
+import Pricing from './pages/Pricing'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
@@ -63,7 +63,7 @@ function App() {
         <div><Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/about' element={<About/>}/>
+          <Route path='/pricing' element={<Pricing/>}/>
           <Route path='/personalization' element={<Personalization/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/signup' element={<SignUp/>}/>

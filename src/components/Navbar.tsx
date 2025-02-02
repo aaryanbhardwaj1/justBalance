@@ -16,9 +16,8 @@ const Navbar: React.FC = () => {
         {/* <Link to="/justBalance/" className={styles.navLink}>Home</a> */}
         <CustomLink to="/" >Home</CustomLink>
         {/* <Link to="/justBalance/about/" className={styles.navLink}>About</a> */}
-        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/pricing">Pricing</CustomLink>
         {/* <Link to="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
-        <CustomLink to="/contact">Contact</CustomLink>
         {/* <Link to="/justBalance/login/" className={styles.navLink}>Log In</a> */}
        <CustomLink to="/login">Log In</CustomLink>
 
