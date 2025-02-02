@@ -12,9 +12,10 @@ const Navbar: React.FC = () => {
 
       {/* Page Links */}
       <div className={styles.navLinks}>
-        <a href="/" className={styles.navLink}>Home</a>
-        <a href="/about" className={styles.navLink}>About</a>
-        <a href="/contact" className={styles.navLink}>Contact</a>
+        <a href="/justBalance/" className={styles.navLink}>Home</a>
+        <a href="/justBalance/about/" className={styles.navLink}>About</a>
+        <a href="/justBalance/contact/" className={styles.navLink}>Contact</a>
+        <a href="/justBalance/login/" className={styles.navLink}>Log In</a>
       </div>
 
       {/* Search Bar */}
