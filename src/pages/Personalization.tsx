@@ -38,24 +38,34 @@ const Personalization = () => {
   return (
     <>
       <div className="centered overlay">
-        <div className="centered mediumbox2">
+        <div className="centered mediumbox3">
+        <div>
           <h2>Tell us about yourself.</h2>
+        </div>
+
+
           {currentPage === 1 && (
-            <>
-              <h3>What's your diet like?</h3>
+            <div>
+            <div>
+            <h3 className='typewriter'>What's your diet like?</h3>
+            </div>
+            <div>
               <input
                 type="text"
                 name="dietType"
                 value={formData.dietType}
                 onChange={handleChange}
-                placeholder="Enter any dietary restrictions"
+                placeholder="Describe your diet"
               />
-            </>
+              </div>
+            </div>
           )}
 
           {currentPage === 2 && (
             <>
-              <h3>Do you have any allergies?</h3>
+            <div>
+              <h3 className='typewriter'>Do you have any allergies?</h3>
+            </div>
               <input
                 type="text"
                 name="allergies"
@@ -68,7 +78,9 @@ const Personalization = () => {
 
           {currentPage === 3 && (
             <>
-              <h3>Are you vegetarian, vegan, etc?</h3>
+            <div>
+              <h3 className='typewriter'>Are you vegetarian, vegan, etc?</h3>
+            </div>
                 <input
                 type="text"
                 name="dietType"
@@ -81,13 +93,15 @@ const Personalization = () => {
 
           {currentPage === 4 && (
             <>
-              <h3>What are your goals? (Cut, Maintain, Bulk) </h3>
+            <div>
+              <h3 className='typewriter'>What are your goals? (Cut, Maintain, Bulk) </h3>
+            </div>
               <input
                 type="text"
                 name="goals"
                 value={formData.goals}
                 onChange={handleChange}
-                placeholder="Enter any dietary restrictions"
+                placeholder="Enter your goals"
               />
             </>
           )}
@@ -106,6 +120,7 @@ const Personalization = () => {
             {currentPage === 4 && (
               <button onClick={handleSubmit}>Submit</button>
             )}
+            <p className='footerT'>Step {currentPage} of 4</p>
           </div>
         </div>
       </div>

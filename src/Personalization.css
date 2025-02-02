@@ -20,14 +20,14 @@ body {
   }
   
   
-  .mediumbox2 {
+  .mediumbox3 {
       overflow: hidden;
       background-color: #f2f2f2;
       border-radius: 2%;
       position: relative;
       justify-content: center;
       width: 40%;
-      height: 70%;
+      height: 35%;
     }
   
     .centered4 {
@@ -246,7 +246,7 @@ input[type="text"]:focus {
 
 /* Buttons */
 button {
-  background-color: #007bff;
+  background-color: #00D241;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -258,7 +258,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #00b439;
 }
 
 button:disabled {
@@ -293,4 +293,31 @@ button + button {
 /* Optional: Adjust the text font size and spacing if needed */
 .optionFrame label {
   font-size: 16px;
+}
+
+.footerT {
+  color: black;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(55) 0s forwards, blink 0.75s step-end infinite;
+  width: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

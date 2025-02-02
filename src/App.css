@@ -246,7 +246,7 @@ h1,h2,h3{
 }
 
 .navLink:hover {
-  color: blue;
+  color: rgb(0, 0, 0);
 }
 
 .searchBar input {
@@ -256,3 +256,5 @@ h1,h2,h3{
   outline: none;
   transform: translateX(75%);
 }
+
+

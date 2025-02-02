@@ -23,9 +23,12 @@ const Home = () => {
       <div className="split right">
           <div className="centered mediumbox">
             <span><img src={justBalanceLogo} className="logo" alt="JustBalanceLogo" /></span>
-            <h2>Smart. Simple. Nutritious.</h2>
-            <h3>AI-Powered Meal Planning from <br/>Your Fridge to Your Plate.</h3>
-            
+            <div>
+            <h2 className='typewriter'>Smart. Simple. Nutritious.</h2>
+            </div>
+            <div>
+            <h3>Powered by AI, We help you create healthy, <br/> balanced diets tailored to your lifestyle.</h3>
+            </div>
             <div className="carousel-container">
 
             <div className="imagecarousel">

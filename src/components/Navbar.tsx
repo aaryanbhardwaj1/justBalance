@@ -14,13 +14,13 @@ const Navbar: React.FC = () => {
       {/* Page Links */}
       <div className={styles.navLinks}>
         {/* <Link to="/justBalance/" className={styles.navLink}>Home</a> */}
-        <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/" >Home</CustomLink>
         {/* <Link to="/justBalance/about/" className={styles.navLink}>About</a> */}
         <CustomLink to="/about">About</CustomLink>
         {/* <Link to="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
         <CustomLink to="/contact">Contact</CustomLink>
-`        {/* <Link to="/justBalance/login/" className={styles.navLink}>Log In</a> */}
-`        <CustomLink to="/login">Log In</CustomLink>
+        {/* <Link to="/justBalance/login/" className={styles.navLink}>Log In</a> */}
+       <CustomLink to="/login">Log In</CustomLink>
 
       </div>
 
@@ -43,9 +43,11 @@ function CustomLink({to, children, ...props}) {
   
 
   return (
-    <li className={path===to? "active" : ""} onClick={forceRerender}>
+    <li className={path===to? "" : ""} onClick={forceRerender}>
       <Link to={to} {...props}>
+
         {children}
+      
       </Link>
     </li>
   )
