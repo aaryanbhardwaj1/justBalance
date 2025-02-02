@@ -12,10 +12,15 @@ const Navbar: React.FC = () => {
 
       {/* Page Links */}
       <div className={styles.navLinks}>
-        <a href="/justBalance/" className={styles.navLink}>Home</a>
-        <a href="/justBalance/about/" className={styles.navLink}>About</a>
-        <a href="/justBalance/contact/" className={styles.navLink}>Contact</a>
-        <a href="/justBalance/login/" className={styles.navLink}>Log In</a>
+        {/* <a href="/justBalance/" className={styles.navLink}>Home</a> */}
+        <CustomLink href="/">Home</CustomLink>
+        {/* <a href="/justBalance/about/" className={styles.navLink}>About</a> */}
+        <CustomLink href="/about">About</CustomLink>
+        {/* <a href="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
+        <CustomLink href="/contact">Contact</CustomLink>
+`        {/* <a href="/justBalance/login/" className={styles.navLink}>Log In</a> */}
+`        <CustomLink href="/login">Log In</CustomLink>
+
       </div>
 
       {/* Search Bar */}
@@ -25,5 +30,18 @@ const Navbar: React.FC = () => {
     </nav>
   );
 };
+
+function CustomLink({href, children, ...props}) {
+  const path = window.location.pathname
+
+  return (
+    <li className={path===href? "active" : ""}>
+      <a href={href} {...props}>
+        {children}
+      </a>
+    </li>
+  )
+  
+}
 
 export default Navbar;

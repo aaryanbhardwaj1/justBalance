@@ -10,31 +10,50 @@ import About from './pages/About';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
-// import Personalization from './pages/Personalization'
+import Personalization from './pages/Personalization'
 
 
 
 function App() {
   let page;
+  console.log(window.location.pathname);
   switch(window.location.pathname){
-    case "/justBalance/":
+    case "/":
       page = <Home/>
       break
-    case "/justBalance/about/":
+    case "/about":
       page = <About/>
       break
-    case "/justBalance/login/":
+    case "/login":
       page = <Login/>
       break
-    case "/justBalance/signup/":
+    case "/signup":
       page = <SignUp/>
       break
-    case "/justBalance/personalization/":
-      // page = <Personalization/>
+    case "/personalization":
+      page = <Personalization/>
       break
-      case "/justBalance/dashboard/":
-        page = <Dashboard/>
-        break
+    case "/dashboard":
+      page = <Dashboard/>
+      break
+    case "":
+      page = <Home/>
+      break
+    case "/about/":
+      page = <About/>
+      break
+    case "/login/":
+      page = <Login/>
+      break
+    case "/signup/":
+      page = <SignUp/>
+      break
+    case "/personalization/":
+      page = <Personalization/>
+      break
+    case "/dashboard/":
+      page = <Dashboard/>
+      break
 
   }
 

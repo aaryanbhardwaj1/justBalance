@@ -1,37 +1,116 @@
-// import React from 'react'
-// import '../Login.css'
-// import justBalanceLogo from '../assets/justBalanced2.png'
+import React, { useState } from 'react';
+import '../Personalization.css';
 
+const Personalization = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [formData, setFormData] = useState({
+    diet: '',
+    allergies: '',
+    dietType: '',
+    goals: ''
+  });
 
-// const Personalization = () => {
-//   return (
-//     <>
-//         <div className="centered overlay">
-//       <div className="centered mediumbox2">
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
 
-//         <form className="login-form absolute-center">
-//           <h2>Tell us about yourself.</h2>
-//           <h3>What's your diet like?</h3>
-//           <div className="survey-container">
-//         <div id="question-container">
-//             <h2 id="question-text"></h2>
-//             <div id="options-container"></div>
-//         </div>
+  const handleNextPage = () => {
+    if (currentPage < 4) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
-//         <div className="navigation">
-//             {/* <button id="prevBtn" onClick={() => prevQuestion())} >Back</button> */}
-//             {/* <button id="nextBtn" onClick="nextQuestion()">Next</button> */}
-//         </div>
-//     </div>
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
-//     <script src="script.js"></script>
-//           </p>
-//         </form>
-//       </div>
-//     </div>
-//     </>
-    
-// )
-// }
+  const handleSubmit = () => {
+    // Handle the form submission logic here
+    console.log('Form submitted:', formData);
+  };
 
-// export default Personalization
+  return (
+    <>
+      <div className="centered overlay">
+        <div className="centered mediumbox2">
+          <h2>Tell us about yourself.</h2>
+          {currentPage === 1 && (
+            <>
+              <h3>What's your diet like?</h3>
+              <input
+                type="text"
+                name="dietType"
+                value={formData.dietType}
+                onChange={handleChange}
+                placeholder="Enter any dietary restrictions"
+              />
+            </>
+          )}
+
+          {currentPage === 2 && (
+            <>
+              <h3>Do you have any allergies?</h3>
+              <input
+                type="text"
+                name="allergies"
+                value={formData.allergies}
+                onChange={handleChange}
+                placeholder="Enter any allergies"
+              />
+            </>
+          )}
+
+          {currentPage === 3 && (
+            <>
+              <h3>Are you vegetarian, vegan, etc?</h3>
+                <input
+                type="text"
+                name="dietType"
+                value={formData.dietType}
+                onChange={handleChange}
+                placeholder="Enter any dietary restrictions"
+              />
+            </>
+          )}
+
+          {currentPage === 4 && (
+            <>
+              <h3>What are your goals? (Cut, Maintain, Bulk) </h3>
+              <input
+                type="text"
+                name="goals"
+                value={formData.goals}
+                onChange={handleChange}
+                placeholder="Enter any dietary restrictions"
+              />
+            </>
+          )}
+
+          <div>
+            {currentPage < 4 && (
+              <>
+                <button onClick={handlePrevPage} disabled={currentPage === 1}>
+                  Previous
+                </button>
+                <button onClick={handleNextPage} disabled={currentPage === 4}>
+                  Next
+                </button>
+              </>
+            )}
+            {currentPage === 4 && (
+              <button onClick={handleSubmit}>Submit</button>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Personalization;

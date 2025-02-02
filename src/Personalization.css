@@ -30,14 +30,13 @@ body {
       height: 70%;
     }
   
-    .centered {
+    .centered4 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       z-index: 2;
-      color: white;
       position: relative;
     }
   
@@ -117,65 +116,181 @@ body {
     }
     
     body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f5f5f5;
-        margin: 0;
-    }
-    
-    .survey-container {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 400px;
-    }
-    
-    .navigation {
-        margin-top: 20px;
-    }
-    
-    button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin: 5px;
-    }
-    
-    #prevBtn {
-        background-color: #ccc;
-    }
-    
-    #nextBtn {
-        background-color: #4CAF50;
-        color: white;
-    }
-    
-    .option-button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        background-color: #ddd;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    
-    .option-button:hover {
-        background-color: #bbb;
-    }
-    
-    input {
-        width: 90%;
-        padding: 8px;
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.survey-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#prevBtn {
+    background-color: #ccc;
+}
+
+#nextBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.option-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.option-button:hover {
+    background-color: #bbb;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Heading Styles */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: center; /* Center the question text */
+}
+
+/* 
+.optionFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px;
+  text-align: center;
+} 
+*/
+
+
+/* Question and Input Styles */
+div.question {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left; /* Ensure the text is aligned to the left */
+}
+
+div.question label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+div.question input[type="radio"] {
+  margin-right: 0%; /* Space between radio button and text */
+  accent-color: #00ff33; /* Custom radio button color */
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Spacing and alignment */
+button + button {
+  margin-left: 10px;
+}
+
+/* General Styles for label inside a div with class 'optionFrame' */
+.optionFrame {
+  display: flex;
+  justify-content: flex-start; /* Align left */
+  align-items: center; /* Center the content vertically */
+  padding: 5px 100px;
+}
+
+/* Style for each label to keep radio and text inline */
+.optionFrame label {
+  display: flex;
+  align-items: center; /* Vertically align radio and text */
+}
+
+/* Adjust radio button to bring it closer to text */
+.optionFrame input[type="radio"] {
+  margin-right: 8px; /* Reducing the margin to bring radio button closer to text */
+}
+
+/* Optional: Adjust the text font size and spacing if needed */
+.optionFrame label {
+  font-size: 16px;
+}
