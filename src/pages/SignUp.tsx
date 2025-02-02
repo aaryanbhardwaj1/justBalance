@@ -41,7 +41,7 @@ const SignUp = () => {
   return (
     <>
       <div className="centered overlay">
-        <div className="centered mediumbox2">
+        <div className="centered mediumbox6">
           <span>
             <img
               src={justBalanceLogo}
