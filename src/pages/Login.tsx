@@ -20,14 +20,28 @@ const Login = () => {
           <input type="password" placeholder="Password" required />
           <button type="submit">Sign In</button>
           <p className="signup-link">
-            Don't have an account? <a href="/justBalance/signup/">Sign Up</a>
+            Don't have an account? <CustomLink href = '/signup'> Sign Up</CustomLink>
           </p>
         </form>
       </div>
     </div>
     </>
+
     
 )
+}
+
+function CustomLink({href, children, ...props}) {
+  const path = window.location.pathname
+
+  return (
+    <li className={path===href? "active" : ""}>
+      <a href={href} {...props}>
+        {children}
+      </a>
+    </li>
+  )
+  
 }
 
 export default Login
