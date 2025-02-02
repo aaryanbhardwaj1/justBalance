@@ -30,7 +30,7 @@ const SignUp = () => {
 
       if (response.status === 201) {
         console.log("Signup successful:", response.data);
-        navigate("/personalization"); // Redirect to login page
+        navigate("/dashboard"); // Redirect to login page
       }
     } catch (error) {
       setError("Signup failed. Email may already be in use.");

@@ -10,6 +10,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+    max-width: 100vw;
   }
   
   .logo {
@@ -23,10 +24,12 @@
   }
   
   .navLinks {
+    margin-left: 10%;
     display: flex;
-    gap: 20px;
-    flex-grow: 1; /* Allow the nav links to take up space */
-    justify-content: center;  /* Align nav links in the center */
+  align-items: center;
+    gap: 10px;
+    flex-grow: 5; /* Allow the nav links to take up space */
+    justify-content: right;  /* Align nav links in the center */
   }
   
   .navLink {
@@ -38,21 +41,5 @@
   
   .navLink:hover {
     color: rgb(0, 0, 0);
-  }
-  
-  /* Align search bar to the right */
-  .searchBar {
-    display: flex;
-    justify-content: flex-end;  /* Align search bar to the right */
-    flex-grow: 0;
-  }
-  
-  .searchBar input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    width: 220px; /* Set the desired width */
-    margin-right: 50px;
   }
   

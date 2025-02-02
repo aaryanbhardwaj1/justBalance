@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import justBalanceLogo from '../assets/justBalanced2.png'
+import justBalanceLogo from "../assets/justBalanced2.png";
 import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
-
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
@@ -14,43 +13,30 @@ const Navbar: React.FC = () => {
       {/* Page Links */}
       <div className={styles.navLinks}>
         {/* <Link to="/justBalance/" className={styles.navLink}>Home</a> */}
-        <CustomLink to="/" >Home</CustomLink>
-        {/* <Link to="/justBalance/about/" className={styles.navLink}>About</a> */}
-        <CustomLink to="/pricing">Pricing</CustomLink>
-        {/* <Link to="/justBalance/contact/" className={styles.navLink}>Contact</a> */}
-        {/* <Link to="/justBalance/login/" className={styles.navLink}>Log In</a> */}
-       <CustomLink to="/login">Log In</CustomLink>
+        <CustomLink to="/">Home</CustomLink>
 
-      </div>
-
-      {/* Search Bar */}
-      <div className={styles.searchBar}>
-        <input type="text" placeholder="Search..." />
+        <CustomLink to="/dashboard">Dashboard</CustomLink>
+        <CustomLink to="/login">Log In</CustomLink>
       </div>
     </nav>
   );
 };
 
-function CustomLink({to, children, ...props}) {
+function CustomLink({ to, children, ...props }) {
   const path = window.location.pathname;
   const [count, setCount] = useState(0);
 
   const forceRerender = () => {
-    setCount(prevCount => prevCount + 1); 
+    setCount((prevCount) => prevCount + 1);
   };
 
-  
-
   return (
-    <li className={path===to? "" : ""} onClick={forceRerender}>
+    <li className={path === to ? "" : ""} onClick={forceRerender}>
       <Link to={to} {...props}>
-
         {children}
-      
       </Link>
     </li>
-  )
-  
+  );
 }
 
 export default Navbar;
